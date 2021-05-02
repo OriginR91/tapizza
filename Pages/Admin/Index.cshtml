@@ -1,0 +1,25 @@
+﻿@page
+@model pizza_mama.Pages.Admin.IndexModel
+@{
+    ViewData["Title"] = "Connexion à l'administration";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<br/>
+
+@if (Model.errorInvalidAccount)
+{ 
+<div class="alert alert-danger" role="alert">
+    <span>Ce compte est invalide.</span>
+</div>
+
+}
+
+<br/>
+
+<form method="post">
+    <input type="text" name="username" placeholder="Votre pseudo..." /><br/><br/>
+    <input type="password" name="password" placeholder="Votre mot de passe..." /><br/><br/>
+    <button>Me connecter</button>
+</form>
